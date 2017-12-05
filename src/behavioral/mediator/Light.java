@@ -1,9 +1,15 @@
-package behavioral.command;
+package behavioral.mediator;
 
 //receiver
 public class Light {
 
     private boolean isOn = false;
+
+    private String location;
+
+    public Light(String location) {
+        this.location = location;
+    }
 
     public boolean isOn() {
         return isOn;
@@ -20,10 +26,10 @@ public class Light {
     }
 
     public void on() {
-        System.out.println("Light switched on.");
+        System.out.println(this.location + " light switched on.");
     }
 
     public void off() {
-        System.out.println("Light switched off.");
+        System.out.println(this.location + " light switched off.");
     }
 }
